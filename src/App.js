@@ -7,6 +7,18 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
+const dataContext = React.createContext();
+
+class dataProvider extends React.Component {
+	state = {
+		data: data
+	}
+
+	render() {
+		<dataContext.Provider value="The value">{this.props.children}</dataContext.Provider>
+	}
+}
+
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
