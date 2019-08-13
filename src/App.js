@@ -8,8 +8,8 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
 // Contexts
-import ProductContext from './contexts/ProductsContext';
-import CartContext from './contexts/CartContext';
+import ProductContext from './context/ProductContext';
+import CartContext from './context/CartContext';
 
 function App() {
 	const [products] = useState(data);
