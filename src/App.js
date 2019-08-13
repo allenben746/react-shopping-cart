@@ -15,7 +15,9 @@ class dataProvider extends React.Component {
 	}
 
 	render() {
+		return (
 		<dataContext.Provider value="The value">{this.props.children}</dataContext.Provider>
+		)
 	}
 }
 
@@ -36,10 +38,12 @@ function App() {
 				exact
 				path="/"
 				render={() => (
-					<Products
-						products={products}
-						addItem={addItem}
-					/>
+					<dataProvider>
+						<Products
+							products={products}
+							addItem={addItem}
+						/>
+					</dataProvider>
 				)}
 			/>
 
